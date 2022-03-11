@@ -10,8 +10,8 @@ import numpy as np
 import yfinance as yf
 from datetime import datetime, timedelta
 
-def make_portfolio(path_in = 'finance/quotes.csv', path_out = 'finance/portfolio.csv'):
-    """ """
+def make_portfolio(path_in = 'data/finance/quotes.csv', path_out = 'data/finance/portfolio.csv'):
+    """ todo """
     # load
     pf = pd.read_csv(path_in)
     pf['Quantity'] = [0 if np.isnan(q) else q for q in pf['Quantity']]
@@ -68,15 +68,15 @@ def make_portfolio(path_in = 'finance/quotes.csv', path_out = 'finance/portfolio
     return pf
 
 
-def load_portfolio(path = 'finance/portfolio.csv', make=False):
-    """ """
+def load_portfolio(path = 'data/finance/portfolio.csv', make=False):
+    """ todo """
     if make:
         make_portfolio(path_out = path)
     return pd.read_csv(path)
 
 
 def calc_gains(pf, hist, forex):
-    """ """
+    """ todo """
     gains_data = []
     iterable = zip( pf['Symbol'], pf['Quantity'], pf['Trade Date'], pf['currency'] )
     for tick, qty, td, cur in iterable:

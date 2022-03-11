@@ -4,7 +4,7 @@ def main():
     st.header('FAQ')
     st.subheader('what')
 
-    st.write("click pas [ici](https://discuss.streamlit.io/t/hyperlink-in-streamlit-without-markdown/7046/2)")
+#    st.write("click pas [ici](https://discuss.streamlit.io/t/hyperlink-in-streamlit-without-markdown/7046/2)")
 
     with st.expander("foo"):
         i=1

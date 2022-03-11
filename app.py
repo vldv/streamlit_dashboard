@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Dec  4 23:34:12 2021
-
+ 
 @author: jacqu
 """
 
@@ -21,7 +21,7 @@ if 'current_module' not in st.session_state:
 
 tool_names = {
               'Finance': ['Asset evolution', 'Stock screener', 'Portfolio analysis'],
-              'Servers' : ['Raid status'],
+              'Servers' : ['server stats'],
               'Tools' : ['Youtube-dl']
               }
 
@@ -34,7 +34,7 @@ with st.sidebar:
         st.write(category)
         for name in tool_list:
             button_value[name] = st.button(name)
-        
+
          
 #%%
   
@@ -58,8 +58,8 @@ elif 'portfolio' in st.session_state['current_module']:
 elif 'screener' in st.session_state['current_module']:
     from screener import main
 
-elif 'raid' in st.session_state['current_module']:
-    st.write("todo")
+elif 'server stats' in st.session_state['current_module']:
+    from server_stats import main
 
 elif 'youtube' in st.session_state['current_module']:
     from youtube_dl import main
