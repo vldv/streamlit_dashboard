@@ -19,3 +19,10 @@ def main():
         cols[0].write(f'{i}')
         cols[1].write(f'{i * i}')
         cols[2].write(f'{i * i * i}')
+        
+    md_func()
+    
+    
+def md_func():
+    st.markdown('coucou')
+  #  st.image('1477528144697.png')

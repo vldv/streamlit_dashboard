@@ -15,6 +15,9 @@ from finance_utils import get_yf_data, normalize
 
 
 def main():
+
+    st.subheader("todo")
+    st.write('anualized return, correlation impact, stability, trend, .. radar chart ?')
     #%% inputs 
     
     col1, col2 = st.columns([1,3])
